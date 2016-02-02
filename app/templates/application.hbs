@@ -1,4 +1,19 @@
-<h2 id="title">Media Catalog</h2>
+<header class="masthead siteheader" role="banner">
+  <nav class="navbar navbar-default" role="navigation">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/">Fe Media Library</a>
+    </div>
+    <ul class="main-nav nav navbar-nav">
+      <li>{{#link-to 'artists'}}artists{{/link-to}}</li>
+    </ul>
+  </nav>
+</header>
 
-{{outlet}}
+<div role="main">
+  {{outlet}}
 
+  {{outlet 'modal'}}
+</div>
+
+<footer class="site-footer" role="contentinfo">
+</footer>
