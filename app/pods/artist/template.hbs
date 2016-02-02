@@ -1,0 +1,16 @@
+<h2 class="artist">{{model.name}}</h2>
+
+<p>
+  <strong>Albums</strong>
+</p>
+
+<ul class="albums">
+  {{#each albums key="id" as |album|}}
+    <li>
+      {{#link-to 'album' album}}{{album.name}}{{/link-to}}
+    </li>
+  {{else}}
+    <li>Sorry no albums</li>
+  {{/each}}
+</ul>
+

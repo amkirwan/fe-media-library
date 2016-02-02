@@ -1,0 +1,18 @@
+<h2>Media Catalog</h2> 
+
+<nav class="sort">
+  {{#link-to 'artists' (query-params sort_direction="asc" sort_on="name")}}Sort ASC{{/link-to}}
+  {{#link-to 'artists' (query-params sort_direction="desc" sort_on="name")}}Sort DESC{{/link-to}}
+</nav>
+
+<ul class="artists">
+  {{#each sortedArtists as |artist|}}
+    <li>
+      {{#link-to 'artist' artist}}{{artist.name}}{{/link-to}}
+    </li>
+  {{/each}}
+</ul>
+
+<p>
+{{#link-to 'artists'}}{{artists}}{{/link-to}}
+</p>
