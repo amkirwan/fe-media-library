@@ -18,6 +18,10 @@ module.exports = function(app) {
   var morgan  = require('morgan');
   app.use(morgan('dev'));
 
+  //body parser
+  var bodyParser = require('body-parser');
+  app.use(bodyParser.json());
+
   seeds.seed(database);
 
   mocks.forEach(function(route) { route(app, database); });
