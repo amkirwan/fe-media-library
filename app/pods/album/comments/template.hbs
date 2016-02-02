@@ -1,0 +1,11 @@
+<h4>Comments</h4>
+
+<div class="comments">
+  {{#each filteredComments as |comment|}}
+    <div class="comment">
+      <strong>{{comment.author}}</strong><br/>
+      <p>{{comment.message}}</p>
+      <button {{action 'showModal' 'delete-comment-modal' comment}}>delete</button>
+    </div>
+  {{/each}}
+</div>
