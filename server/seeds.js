@@ -89,7 +89,7 @@ module.exports = {
     }, {
       name: 'Reggae Ambient',
       year: 1992,
-      artist_id: 5,
+      artist_id: 4,
       total_sold: 9849574,
       comment_ids: [1],
     }].map(saveAlbum);
