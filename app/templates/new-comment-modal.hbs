@@ -1,0 +1,16 @@
+{{#fe-modal model=model title="New Comment" ok='saveNewComment' close='removeModal' form=true as |ok|}}
+  <form class="form" role="form" {{action ok model on="submit"}}> 
+    <div class="form-group">
+      <label for="{{selectedId}}">Author</label>
+      {{input type="text" value=model.author required=true size="25"}}
+    </div>
+    <div class="form-group">
+      <label for="{{selectedId}}">Message</label>
+      {{textarea value=model.message cols="50" rows="5"}}
+    </div>
+    <div class="form-group">
+      <button type="submit" class="btn">Add Comment</button>
+      <button type="button" class="btn btn-default cancel" data-dismiss="modal">Cancel</button>
+    </div>
+  </form>
+{{/fe-modal}}
