@@ -1,0 +1,14 @@
+<h2 class="artist">{{model.name}}</h2>
+
+<ul class="album">
+  <li><strong>Name:</strong> {{model.name}}</li>
+  <li><strong>Year:</strong> {{model.year}}</li>
+  <li><strong>Total Sold:</strong> {{model.totalSold}}</li>
+  <li><strong>Artist:</strong> {{#link-to 'artist' model.artist}}{{model.artist.name}}{{/link-to}}</li>
+</ul>
+
+{{outlet}}
+
+<button {{action 'showNewCommentModal' 'new-comment-modal' model}}>Add comment</button>
+
+{{outlet 'new-comment'}}
